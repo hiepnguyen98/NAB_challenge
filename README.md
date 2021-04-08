@@ -97,6 +97,64 @@ PROJECT_FOLDER
 ###  Order product 
      curl -X POST 'http://localhost:8080/order/' --header 'Content-Type: application/json' --data-raw {
     "order": { "totalPrice":"", "customerName":"hiep", "orderEmail":"test@gmail.com", "orderPhoneNumber":"12343241",  "orderAddress":"123/45/Hiep"  },  "orderDetails":[  { "orders":{   },  "product":{  "id":30  },  "unitPrice":0, "quantity":2  }, { "orders":{  }, "product":{ "id":28 }, "unitPrice":0,"quantity":3 }]} 
+    
+###  Add staff 
+      curl --location --request POST 'http://localhost:8080/manage/staff/add/'  --header 'Authorization: Basic'  --header 'Content-Type: application/json'
+      --data-raw '{
+          "fullName":"Nguyễn Văn a",
+          "email":"test@gmail.com",
+          "userName":"user",
+          "password":"12345",
+          "role":{
+              "id":2
+          },
+      }'
+      
+### Update staff
+      curl --location --request PUT 'http://localhost:8080/manage/staff/update/' --header 'Authorization: Basic aGllcG5ndXllbjI5MDExOTk4QGdtYWlsLmNvbToxMjM0'
+      --header 'Content-Type: application/json' 
+      --data-raw '{
+          "id":12,
+          "fullName":"Nguyễn Văn a",
+          "email":"test@gmail.com",
+          "userName":"user",
+          "password":"12345",
+          "role":{
+              "id":2
+          },
+      }'
+      
+### Add branch
+      curl --location --request POST 'http://localhost:8080/branch/add/' --header 'Content-Type: application/json'
+      --data-raw '{
+          "branchName":"Apple"
+      }'
+     
+### Update branch
+      curl --location --request PUT 'http://localhost:8080/branch/update/' --header 'Content-Type: application/json' 
+      --data-raw '{
+          "id":1,
+          "branchName":"Apple"
+      }'
+      
+### delete branch
+      curl --location --request DELETE 'http://localhost:8080/branch/delete/{id}' --header 'Content-Type: application/json' 
+      
+### Add category
+      curl --location --request POST 'http://localhost:8080/category/add/' --header 'Content-Type: application/json'
+      --data-raw '{
+          "categoryName":"phone"
+      }'
+     
+### Update category
+      curl --location --request PUT 'http://localhost:8080/category/update/' --header 'Content-Type: application/json' 
+      --data-raw '{
+          "id":1,
+          "categoryName":"laptop"
+      }'
+      
+### Delete category
+      curl --location --request DELETE 'http://localhost:8080/category/delete/{id}' --header 'Content-Type: application/json'
  
 ###  Get user information in Facebook
    - Generate Facebook authorize url:
