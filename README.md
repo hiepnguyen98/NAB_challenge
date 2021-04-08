@@ -24,6 +24,7 @@ PROJECT_FOLDER
 |          └── CustomerControllerUnitTest #Contains unit tests for order API 
 |          └── ProductControllerUnitTest #Contains unit tests for ProductController (add, update, delete, getAll, filter, search, sort product API )
 |          └── StaffControllerUnitTest #Contains unit tests for StaffController (add, update staff API)
+└──[diagrams]  Contains images of the diagrams
    ```
 ## Key Java libraries and frameworks
  - java 11
