@@ -19,7 +19,7 @@ import com.challenge.eCommerce.exception.ResourceNotFoundException;
 import com.challenge.eCommerce.service.ProductService;
 
 @RestController
-@RequestMapping(value ="/product/",consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+@RequestMapping(value ="/product/")
 public class ProductController {
 	@Autowired
 	private ProductService productService;
